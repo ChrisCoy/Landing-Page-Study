@@ -2,7 +2,7 @@
   --primary-color: #CC5577;
   --white-color: #FAFAFA;
   --black-color: #111;
-  --light-gray-color: #EEE;
+  --light-gray-color: rgb(224, 216, 219);
   --gap: 3rem;
 }
 
@@ -59,7 +59,6 @@ h6 {
   background-size: cover;
   background-position: center center;
   color: var(--white-color);
-  min-height: 100vh;
 }
 
 .white-bg {
@@ -67,7 +66,7 @@ h6 {
 }
 
 .main-content {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
   padding: var(--gap);
 }
@@ -83,7 +82,8 @@ h6 {
   left: 0;
   right: 0;
   width: 100%;
-  border-bottom: 1px solid var(--light-gray-color);
+  border-bottom: 0.1rem solid var(--light-gray-color);
+  z-index: 1;
 }
 
 .menu-content {
@@ -131,4 +131,40 @@ h6 {
 .menu ul li a:hover::after{
   width: 50%;
   left: 25%;
+}
+
+.menu-spacing {
+  height: 6.5rem;
+}
+
+.intro-content {
+  position: relative;
+  padding-top: -6rem;
+  top: -2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--gap);
+  height: 100vh;
+}
+
+.intro-text-content, .intro-img{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.intro-text-content h2{
+  font-size: 8rem;
+  margin-bottom: 5rem;;
+  text-transform: uppercase;
+}
+
+.intro-text-content p {
+  line-height: 1.5;
+  font-size: 1.8rem;
+}
+
+.intro-img img {
+  max-width: 100%;
+  height: auto;
 }
