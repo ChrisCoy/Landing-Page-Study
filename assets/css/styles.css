@@ -1,6 +1,6 @@
 :root {
   --primary-color: #CC5577;
-  --white-color: #FAFAFA;
+  --white-color: #ffffff;
   --black-color: rgb(39, 38, 41);
   --light-gray-color: rgb(224, 216, 219);
   --gap: 3rem;
@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -70,10 +71,13 @@ h6 {
 }
 
 .bg-2 {
-  background-image: url('../img/Background2.svg');
+  background-image: url('../img/top3.svg');
   background-size: cover;
   background-position: center center;
-  color: var(--white-color);
+}
+
+.bg-2 p{
+  color: var(--black-color);
 }
 
 .white-bg {
@@ -84,7 +88,7 @@ h6 {
 .main-content {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 8rem var(--gap);
+  padding: 6.5rem var(--gap);
 }
 
 .section {
@@ -155,7 +159,6 @@ h6 {
 
 .intro-content {
   position: relative;
-  padding-top: -6rem;
   top: -2rem;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -183,6 +186,8 @@ h6 {
   color: var(--black-color);
   font-size: 1.8rem;
 }
+
+
 
 .top3-content {
   max-width: 64rem;
@@ -247,4 +252,70 @@ h6 {
 .gallery-img img:hover {
   transform: translate(-3%, 3%) scale(1.1) rotate(3deg);
 
+}
+
+.responsive-table {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+
+table {
+  color: var(--black-color);
+  border-collapse: collapse;
+  min-width: 360px;
+  width: 100%;
+}
+
+table caption {
+  font-style: italic;
+  font-size: 1.6rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+table td, table th {
+  white-space: nowrap;
+  padding: 1rem ;
+  text-align: left;
+  border: 0.1rem solid var(--light-gray-color);
+}
+
+tfoot td, table th {
+  background: var(--light-gray-color);
+}
+
+.contact-form {
+  grid-column: span 2;
+}
+
+
+.contact-form .form-grid {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.form-group {
+  min-width: 400px;
+  flex: 1 1 320px;
+}
+
+.form-group label{
+  display: block;
+  font-size: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+.form-grid legend h3{
+  font-size: 6rem;
+}
+
+.form-group input, .form-group textarea {
+  border: 0.1rem solid var(--light-gray-color);
+  background: var(--white-color);
+  padding: 1.5rem 2rem;
+  width: 80%;
 }
