@@ -154,10 +154,6 @@ h6 {
   left: 25%;
 }
 
-.menu-spacing {
-  height: 6.5rem;
-}
-
 .intro-content {
   position: relative;
   top: -2rem;
@@ -456,9 +452,5 @@ tfoot td, table th {
   .close-menu:checked~.close-menu-label::after {
     display: block;
     content: '×';
-  }
-
-  .menu-spacing{
-    display: none;
   }
 }
