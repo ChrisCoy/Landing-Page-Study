@@ -383,7 +383,13 @@ tfoot td, table th {
   border: 0.1rem solid var(--light-gray-color)  ;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 515px) and (max-width: 800px) {
+  .top3-content h2{
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 800px){
   .intro-content, .grid {
     grid-template-columns: 1fr;
   }
@@ -401,11 +407,6 @@ tfoot td, table th {
   .grind-one-content {
     display: block;
   }
-
-  .top3-content h2{
-    font-size: 5.5rem;
-  }
-
   .menu {
     bottom: 0;
   }
@@ -452,5 +453,21 @@ tfoot td, table th {
   .close-menu:checked~.close-menu-label::after {
     display: block;
     content: '×';
+  }
+}
+
+@media (max-width: 514px) {
+  h2{
+    font-size: 5rem;
+  }
+  h3{
+    font-size: 3rem;
+  }
+  .form-group {
+    min-width: 200px;
+  }
+
+  .top3-content h2{
+    font-size: 3.5rem;
   }
 }
